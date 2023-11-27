@@ -1,2 +1,2 @@
-# j-zyki_skryptowe-bash
+# Języki skryptowe
 Repozytorium z programami na zajęcia Języki skryptowe
