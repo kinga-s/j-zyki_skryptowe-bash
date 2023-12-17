@@ -26,8 +26,6 @@ class ActionTellOpeningHours(Action):
             return []
 
         if hour:
-            print(hour)
-            print(type(hour))
             if weekday in opening_hours_data['items']:
                 open_hour = opening_hours_data['items'][weekday]['open']
                 close_hour = opening_hours_data['items'][weekday]['close']
@@ -71,7 +69,6 @@ class ActionGiveMenu(Action):
         response = None
         if food:
             food = food.capitalize()
-            print(food)
 
         file = os.path.join(current_directory, "menu.json")
         menu_data = open_file(file)

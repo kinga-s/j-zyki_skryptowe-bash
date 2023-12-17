@@ -1,11 +1,11 @@
-#Rasa chatbot
+# Rasa chatbot
 
 This is a rasa chatbot which handles customers questions to the restaurant. You can talk about:
 * restaurant opening days/hours
 * menu items with their price and preparation time
 * placing an order
 
-##Train model:
+## Train model:
 In first terminal window run:
 ```commandline
 rasa run actions --cors "*"
@@ -16,7 +16,7 @@ rasa train
 ```
 
 
-##Run chatbot on discord:
+## Run chatbot on discord:
 Pre requested:
 * Train the bot as mentioned above
 * Create your discord bot
