@@ -1,0 +1,136 @@
+version: "3.1"
+
+nlu:
+- intent: opening_hours
+  examples: |
+    - When do you [open](open) on [Sunday](weekday)?
+    - Is it [open](open) on [Sunday](weekday)?
+    - When do you [close](open)?
+    - Are you [open](open) on [Monday](weekday)
+    - Can I come on [Saturday](weekday)?
+    - Can I order on [Friday](weekday)?
+    - Are you [open](open) on [Tuesday](weekday)
+    - What time do you [close](open) on [Saturdays](weekday)?
+    - Can I step by on [Wednesday](weekday)?
+    - I would like to come on [Thursday](weekday).
+    - Are you [closed](open) at [21](time) on [Wednesday](weekday)?
+
+
+- intent: menu
+  examples: |
+    - Do you have [Tiramisu](food)?
+    - Can I see the [menu](menu)?
+    - Can I have [hot-dog](food)?
+    - Is there a [pizza](food) in the [menu](menu)?
+    - [How much](price) is for [lasagne](food)?
+    - How [expensive](price) is [burger](food)?
+    - [How long](duration) i would [wait](duration) for [spaghetti carbonara](food)?
+    - [How long](duration) would it take to make a [pizza](food)?
+
+
+- intent: order
+  examples: |
+    - I want [pizza](food)
+    - I want to order a [lasagne](food)
+    - Give me [burger](food)
+    - Just [spaghetti carbonara](food), please.
+
+- intent: finish_ordering
+  examples: |
+    - No, thanks
+    - No, thank you
+    - That's all
+    - That is all
+    - Thats all
+    - Thanks
+    - Thank you
+    - That would be all
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
