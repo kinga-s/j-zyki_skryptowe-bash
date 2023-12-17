@@ -42,9 +42,6 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_order:
-  - text: "Would you like anything else?"
-
   utter_close_order:
   - text: "Enjoy yourself."
 
@@ -55,3 +52,4 @@ session_config:
 actions:
   - action_tell_opening_hours
   - action_give_menu
+  - action_place_order

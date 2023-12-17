@@ -16,8 +16,3 @@ rules:
   steps:
   - intent: finish_ordering
   - action: utter_close_order
-
-- rule: Ask if the user want something else anytime the user orders
-  steps:
-  - intent: order
-  - action: utter_order

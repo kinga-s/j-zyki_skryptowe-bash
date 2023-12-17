@@ -34,11 +34,14 @@ nlu:
     - I want to order a [lasagne](food)
     - Give me [burger](food)
     - Just [spaghetti carbonara](food), please.
+    - I would like a glass of [water](food)
+    - [Tiramisu](food), please
+    - I want a [hot-dog](food), sir
 
 - intent: finish_ordering
   examples: |
-    - No, thanks
-    - No, thank you
+    - thx
+    - thank u
     - That's all
     - That is all
     - Thats all

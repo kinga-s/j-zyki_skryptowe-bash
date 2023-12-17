@@ -93,6 +93,36 @@ class ActionGiveMenu(Action):
         return []
 
 
+class ActionPlaceOrder(Action):
+    """Action: get the order from the user."""
+    def name(self) -> Text:
+        return "action_place_order"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        food = extract_entity(tracker, "food")
+
+        response = None
+        if food:
+            food = food.capitalize()
+
+        file = os.path.join(current_directory, "menu.json")
+        menu_data = open_file(file)
+        if not menu_data:
+            return []
+
+        if food:
+            for meal in menu_data["items"]:
+                if food == meal["name"]:
+                    response = f"Your order was placed. The total is {meal['price']}$. " \
+                               f"Waiting time is {int(meal['preparation_time'] * 60)} minutes."
+                    break
+        elif not response:
+            response = "Sorry, we don't have that on the menu."
+
+        dispatcher.utter_message(text=response)
+        return []
+
+
 def open_file(file: str) -> json:
     """Open and load json file"""
     try:

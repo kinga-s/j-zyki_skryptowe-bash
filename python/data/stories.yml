@@ -29,13 +29,49 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: Tell the user opening hours
+- story: long chat path
   steps:
     - intent: opening_hours
     - action: action_tell_opening_hours
     - intent: menu
     - action: action_give_menu
     - intent: order
-    - action: utter_order
+    - action: action_place_order
     - intent: finish_ordering
     - action: utter_close_order
+
+- story: menu path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: opening_hours
+    - action: action_tell_opening_hours
+    - intent: menu
+    - action: action_give_menu
+
+- story: place an order short path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: order
+    - action: action_place_order
+    - intent: finish_ordering
+    - action: utter_close_order
+
+- story: place an order long path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: menu
+    - action: action_give_menu
+    - intent: order
+    - action: action_place_order
+    - intent: finish_ordering
+    - action: utter_close_order
+
+- story: opening hours path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: opening_hours
+    - action: action_tell_opening_hours
