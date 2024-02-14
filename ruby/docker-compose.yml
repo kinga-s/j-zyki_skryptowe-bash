@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  postgres:
+    image: "postgres:16.0-alpine"
+    container_name: crawler_container
+    ports:
+      - "5440:5432"
+    environment:
+      - POSTGRES_DB=crawler
+      - POSTGRES_USER=crawler
+      - POSTGRES_PASSWORD=crawler
+    volumes:
+      - crawler_data:/var/lib/postgresql/data
+
+volumes:
+  crawler_data:
